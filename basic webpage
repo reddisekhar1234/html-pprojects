@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drop-down menu design</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="menu-bar">
+<ul>
+<li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+<li class="active"><a href="#"><i class="fa fa-user"></i>About us</a>
+     <div class="sub-menu-1">
+       <ul>
+	 <li><a href="#">Mission</a></li>
+	 <li><a href="#">Vision</a></li>
+	 <li><a href="#">Team</a></li>
+       </ul>
+      </div>
+</li>
+<li class="active"><a href="#"><i class="fa fa-clone"></i>Services</a>
+<div class="sub-menu-1">
+<ul>
+<li><a href="#">Web designing</a></li>
+<li class="hover-me"><a href="#">Marketing</a><i class="fa fa-angle-right">
+       <div class="sub-menu-2">
+        <ul>
+	 <li><a href="#">SEO</a></li>
+	 <li><a href="#">Social media</a></li>
+	 <li><a href="#">Email marketing</a></li>
+        </ul>
+      </div>
+</li>
+<li class="hover-me"><a href="#">Mobile App</a><i class="fa fa-angle-right"></i>
+       <div class="sub-menu-2">
+        <ul>
+	 <li><a href="#">Android App</a></li>
+	 <li><a href="#">ios App</a></li>
+	 <li><a href="#">Ionic App</a></li>
+        </ul>
+      </div>
+</li>
+</ul>
+</div>
+</li>    
+</li>
+<li><a href="#"><i class="fa fa-users"></i>Clients</a></li>
+<li><a href="#"><i class="fa fa-angellist"></i>Investers</a></li>
+<li><a href="#"><i class="fa fa-inr">Pricing</i></a></li>
+<li><a href="#"><i class="fa fa-edit">Training</i></a></li>
+<li><a href="#"><i class="fa fa-phone">Contact</i></a>
+<div class="sub-menu-1">
+<ul>
+<li><a href="#">phone number:</a></li>
+<div class="sub-menu-1">
+        <ul>
+	 <li><a href="#">+91 8184819814</a></li>
+</li>
+</div>
+</body>
+</html>
+
+
+<..! CSS PART..>
+*
+{
+   padding:0;
+   margin:0;
+   background-sizing:bordes-box;
+}
+body
+{
+   background-image:url("pexels-photo-2135677.jpg");
+   background-size:cover;
+   background-position:center;
+   background-sizing:border-box;
+   font-family:sans-serif;
+}
+.menu-bar
+{
+   background:rgb(0,100,0);
+   text-align:center;
+}
+.menu-bar ul
+{
+   display:inline-flex;
+   list-style:none;
+   color:#fff;
+}
+.menu-bar ul li
+{
+   width:120px;
+   margin:15px;
+   padding:15px;
+}
+.menu-bar ul li a
+{
+   text-decoration:none;
+   color:#fff;
+}
+.active, .menu-bar ul li:hover
+{
+   background:#2babod;
+   border-radius:3px;
+}
+.menu-bar .fa
+{
+   margin-right:8px;
+}
+.sub-menu-1
+{
+    display:none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+   display:block;
+   position:absolute;
+   background:rgb(0,100,0);
+   margin-top:15px;
+   margin-left:-15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display:block;
+    margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width:150px;
+    padding:10px;
+    border-bottom:1px dotted #fff;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+	color:#b2ff00;
+}
+.fa-angle-right
+{
+	float:right;
+
+}
+.sub-menu-2
+{
+	display:none;
+}
+.hover-me:hover .sub-menu-2
+{
+	position:absolute;
+	display:block;
+	margin-top:-40px;
+	margin-left:140px;
+        background:rgb(0,100,0);
+}
